@@ -23,7 +23,7 @@ public class AntiPiglinTrade extends JavaPlugin implements Listener {
     @Override
     public void onEnable() {
         getServer().getPluginManager().registerEvents(this, this);
-        com.steven_os.antipiglintrade.AntiPiglinTradeCommandExecutor executor = new AntiPiglinTradeCommandExecutor(this);
+        com.steven_os.antipiglintrade.AntiPiglinTradeCommandExecutor executor = new com.steven_os.antipiglintrade.AntiPiglinTradeCommandExecutor(this);
         getCommand("antipiglintrade").setExecutor(executor);
         getCommand("antipiglintrade").setTabCompleter(executor);
         loadConfig();
@@ -33,7 +33,7 @@ public class AntiPiglinTrade extends JavaPlugin implements Listener {
         // Initialize Metrics only if 'enable-bstats' is true
         if (isEnableBStats) {
             int pluginId = 21750; // Replace this with your bStats plugin ID!
-            Metrics metrics = new Metrics(this, pluginId);
+            com.steven_os.antipiglintrade.Metrics metrics = new com.steven_os.antipiglintrade.Metrics(this, pluginId);
             // Add your custom charts or other bStats-related logic here
             // only if 'enable-bstats' is true.
         }
@@ -76,7 +76,7 @@ public class AntiPiglinTrade extends JavaPlugin implements Listener {
     }
 
     private boolean isAllowedWorld(String worldName) {
-        return config.getStringList("world-list").contains(worldName);
+        return !config.getStringList("world-list").contains(worldName);
     }
 
     private void printConsoleMessage() {
