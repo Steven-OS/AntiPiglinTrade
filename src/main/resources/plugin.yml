@@ -1,0 +1,9 @@
+name: AntiPiglinTrade
+version: 1.0.0
+description: Plugin that disables piglin bartering in specified worlds.
+author: Steven-OS
+main: com.steven_os.antipiglintrade.AntiPiglinTrade
+commands:
+  antipiglintrade:
+    description: Controls the AntiPiglinTrade plugin.
+api-version: 1.20
