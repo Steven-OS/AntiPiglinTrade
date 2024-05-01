@@ -24,7 +24,7 @@ public class AntiPiglinTrade extends JavaPlugin implements Listener {
     @Override
     public void onEnable() {
         getServer().getPluginManager().registerEvents(this, this);
-        AntiPiglinTradeCommandExecutor executor = new AntiPiglinTradeCommandExecutor(this);
+        com.steven_os.antipiglintrade.AntiPiglinTradeCommandExecutor executor = new AntiPiglinTradeCommandExecutor(this);
         getCommand("antipiglintrade").setExecutor(executor);
         getCommand("antipiglintrade").setTabCompleter(executor);
         loadConfig();
