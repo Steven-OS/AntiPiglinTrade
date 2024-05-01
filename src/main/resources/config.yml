@@ -1,14 +1,15 @@
-#--------------------------------------------------------------#
-#                                                              #
-#                       AntiPiglinTrade                        #
-#            Made by: https://github.com/Steven-OS             #
-#                                                              #
-#--------------------------------------------------------------#
+#------------------------------------------------------------------#
+#                                                                  #
+#                       AntiPiglinTrade                            #
+#                      Made by Steven-OS                           #
+#           Source code: https://github.com/Steven-OS              #
+#   Documentation: https://steven-os.gitbook.io/antipiglintrade/   #
+#                                                                  #
+#------------------------------------------------------------------#
 
 # Decide which world the plugin will stop piglin trading.
 # If you want to allow piglin trade in a specific world,
 # simply remove it from the list below.
-
 world-list:
   - world
   - world_nether
@@ -16,11 +17,11 @@ world-list:
 
 error-message: "&cPiglin bartering is disabled."
 
-#--------------------------------------------------------------#
-#                                                              #
-#                      Auto Update Config                      #
-#                                                              #
-#--------------------------------------------------------------#
+#------------------------------------------------------------------#
+#                                                                  #
+#                         Auto Update Config                       #
+#                                                                  #
+#------------------------------------------------------------------#
 # Automatically update and override the config settings if
 # there is a new update that contains a new setting.
 
@@ -29,23 +30,16 @@ error-message: "&cPiglin bartering is disabled."
 
 # false: The plugin will NOT reset this config.yml, but you will
 # need to manually add the new options when they are released.
-
 enable-update-config: false
 
-#--------------------------------------------------------------#
-#                                                              #
-#                           bStats                             #
-#                                                              #
-#--------------------------------------------------------------#
+#------------------------------------------------------------------#
+#                                                                  #
+#                               Other                              #
+#                                                                  #
+#------------------------------------------------------------------#
 # Collects statistics to improve the plugin.
 # It does not impact performance; recommended to set to 'true'.
-
 enable-bstats: true
 
-#--------------------------------------------------------------#
-#                                                              #
-#                          Version                             #
-#                                                              #
-#--------------------------------------------------------------#
 # Do not touch this option; the plugin will break.
 version: 1.0

@@ -9,7 +9,6 @@ import org.bukkit.entity.Piglin;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
-import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.event.entity.EntityPickupItemEvent;
 import org.bukkit.event.player.PlayerInteractEntityEvent;
 import org.bukkit.inventory.ItemStack;
@@ -29,6 +28,15 @@ public class AntiPiglinTrade extends JavaPlugin implements Listener {
         getCommand("antipiglintrade").setTabCompleter(executor);
         loadConfig();
         printConsoleMessage();
+        boolean isEnableBStats = getConfig().getBoolean("enable-bstats", true); // The second parameter is default value
+
+        // Initialize Metrics only if 'enable-bstats' is true
+        if (isEnableBStats) {
+            int pluginId = 21750; // Replace this with your bStats plugin ID!
+            Metrics metrics = new Metrics(this, pluginId);
+            // Add your custom charts or other bStats-related logic here
+            // only if 'enable-bstats' is true.
+        }
     }
 
     @Override
