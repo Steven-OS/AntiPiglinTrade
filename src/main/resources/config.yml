@@ -42,4 +42,4 @@ enable-update-config: false
 enable-bstats: true
 
 # Do not touch this option; the plugin will break.
-version: 1.0
+version: 1.0.1
